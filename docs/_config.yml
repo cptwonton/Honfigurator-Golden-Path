@@ -29,8 +29,6 @@ github_username:  cptwonton
 # Build settings
 theme: minima
 remote_theme: pages-themes/midnight@v0.2.0
-source: src
-destination: docs
 plugins:
   - jekyll-feed
   - jekyll-remote-theme 
