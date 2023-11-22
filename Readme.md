@@ -1,9 +1,3 @@
----
-layout: page
-title: "Readme.md"
-permalink: /
----
-
 # Server Setup on AWS
 
 ## Introduction
