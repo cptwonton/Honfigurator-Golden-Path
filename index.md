@@ -27,8 +27,8 @@ Embark on this adventure with caution, for while AWS costs carry no commitment, 
 
 Before you begin, ensure you have the following:
 
-- [AWS account](/docs/aws-account.md)
-- [PK account](/docs/project-kongor-account.md)
+- [AWS account](/Honfigurator-Golden-Path/docs/aws-account.md)
+- [PK account](/Honfigurator-Golden-Path/docs/project-kongor-account.md)
   - Note: You cannot use the account you play on while also using that same account to run this server.
   - You must use a new email that has not been used before to create a PK account
 
@@ -123,7 +123,7 @@ Once someone grants you those permissions, your server will automatically pick t
 
 ### 3.1 AWS Cost Explorer
 
-Please see [AWS Cost Explorer](/docs/aws-cost-explorer.md)
+Please see [AWS Cost Explorer](/Honfigurator-Golden-Path/docs/aws-cost-explorer.md)
 
 ### 3.2 HonFigurator Management Portal
 
