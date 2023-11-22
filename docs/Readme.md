@@ -35,43 +35,72 @@ Before you begin, ensure you have the following:
 - [Configuring security groups](/docs/security-groups.md)
 
 ## Step 2: Configure Server Environment
-### 2.1 Operating System Setup
-- Choosing a suitable OS (e.g., Amazon Linux)
-- Installing necessary dependencies
+### 2.1 Initial Ubuntu Setup
+Now that your instance is running, we need to set up HoN. This is a very straightforward, no frills approach. Simply run these commands exactly as they are shown, and you will win.
+
+`sudo passwd ubuntu` -> set your password. This ensures noone can SSH into your server without your password.
+`echo -e '\nif [ -z "$TMUX" ]; then\ntmux attach-session -t default || tmux new-session -s default\nfi' >> ~/.bashrc && source ~/.bashrc`
+`sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt install curl sudo screen -y`
 
 ### 2.2 Game Server Installation
-- Downloading and installing Heroes of Newerth server files
-- Configuring server settings and options
 
-### 2.3 Automating Deployments
-- Scripting deployment processes for ease of use
-- Version control and rollback strategies
+`curl https://honfigurator.app/hon/server/las/installer.sh | sudo bash -`
+`chown +x /opt/hon/app/launcher`
+`sudo ./opt/hon/app/launcher`
+`sudo reboot`
 
-## Step 3: Monitoring and Maintenance
-### 3.1 AWS CloudWatch
-- Setting up monitoring and alerts for instances
-- Monitoring resource utilization
+Give your server a moment to respawn. It should not take long!
 
-### 3.2 Backups and Recovery
-- Implementing regular backups for game data
-- Strategies for server recovery
+### 2.3 Launch and Configure HonFigurator
 
-## Step 4: Community Management
-### 4.1 Setting Up Communication Channels
-- Establishing communication platforms for the community (Discord, forums, etc.)
+Once it is back up again:
+`cd /opt/hon/honfigurator`
+`sudo python3 main.py`
 
-### 4.2 Moderation and Support
-- Guidelines for moderation and support
-- Handling user issues and escalations
+HonFigurator will prompt you for some information. Provide it your username that you created solely for hosting, alongside the password, discord ID, etc...
+[See details](https://github.com/HoNfigurator/HoNfigurator-Central)
+
+Ensure your server name follows convention! This is what players see when they type in /gi. 
+`<hon region>-<locality> <name>`
+where...
+- `<hon region>` is your server's location (AU/BR/EU/RU/SEA/TH/USE/USW), all caps
+- `<locality>` is country dependent, so in america it would be the state, in other places like EU it would be the country. normal capitalization
+- `<name>` would be the first 4-6 letters of your discord handle/hon username, normal capitalization
+no special characters!
+
+so for example:
+- AU-Adelaide Derp
+- USE-NewYork Grinsp
+- USW-Arizona Honor
+
+
+Your server should be running, perhaps with some warning messages about having a hosts role. Don't worry, just leave the server running.
+
+### 2.4: Acquire Necessary Roles
+
+Go to the #hosting channel in Project Kongor's discord channel. Copy paste this message:
+```
+Would someone please provide <your project kongor hosting account> permissions to host, as well as the "Host" role for me in discord? 
+``` 
+
+Both of these are required for your server to work!
+
+Once someone grants you those permissions, your server will automatically pick that up and your servers will be available for players to connect to.
+
+## Step 3: Monitoring
+### 3.1 AWS Cost Explorer
+
+Please see [AWS Cost Explorer](/docs/aws-cost-explorer.md)
+
+### 3.2 HonFigurator Management Portal
+
+Navigate to the [HonFigurator Management Portal](https://management.honfigurator.app/login)
+Log in with your discord
+Using the server name you created earlier in HonFigurator, and the public IP of your server, click Add Server at the top right and add your server to HonFigurator.
 
 ## Conclusion
-Summarize key points and provide encouragement for community contributions and improvements.
 
-## Additional Resources
-- Links to AWS documentation
-- Links to relevant Project Kongor resources
-- References for further learning
+Congratulations! You've successfully launched and configured your EC2 instance for hosting a Project Kongor Heroes of Newerth server on AWS.
+Remmber to periodically check Cost Explorer to ensure your actual cost aligns with what you'd expect.
 
-
-```markdown
-![AWS Console](/docs/images/aws_console.png)
+Thank you for hosting!
