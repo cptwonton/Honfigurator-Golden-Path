@@ -1,6 +1,8 @@
+---
 layout: page
 title: "Readme.md"
 permalink: /
+---
 
 # Server Setup on AWS
 
@@ -14,7 +16,7 @@ Welcome to the enchanting journey of setting up your very own Project Kongor Her
 
 Embark on this adventure with caution, for while AWS costs carry no commitment, the dance of provisioning holds a dual-edged charm. With careful steps, your bill can remain as elusive as a wisp in the night, but missteps may summon a towering AWS bill. Fear not, for this guide is your trusted companion, pointing out the treacherous turns and whispering, "BE CAREFUL" as you traverse the ethereal landscapes of cloud hosting. May your journey be both whimsical and prosperous! 🚀🔮
 
-## Acronyms:
+## Acronyms
 
 - Project Kongor (PK)
 - HonFigurator (HF)
@@ -29,7 +31,7 @@ Before you begin, ensure you have the following:
 
 - [AWS account](/docs/aws-account.md)
 - [PK account](/docs/project-kongor-account.md)
-  - Note: You cannot use the account you play on while also using that same account to run this server. 
+  - Note: You cannot use the account you play on while also using that same account to run this server.
   - You must use a new email that has not been used before to create a PK account
 
 ## Step 1: Set Up AWS Resources
@@ -89,7 +91,7 @@ Once it is back up again:
 HonFigurator will prompt you for some information. Provide it your username that you created solely for hosting, alongside the password, discord ID, etc...
 [See details](https://github.com/HoNfigurator/HoNfigurator-Central)
 
-Ensure your server name follows convention! This is what players see when they type in /gi. 
+Ensure your server name follows convention! This is what players see when they type in /gi.
 
 `<hon region>-<locality> <name>`
 
