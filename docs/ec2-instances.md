@@ -26,16 +26,19 @@ Click on the "Instances" in the left navigation pane and then click the "Launch 
 
 - Under "Quick Start", Select Ubuntu. This should populate the "AMI" dropdown with Ubuntu Server 22.04 LTS (HVM), SSD Volune Type AMI
 - 
+
 As of this writing, Ubuntu Linux is the only option confirmed tested and working on AWS. If you are a power-user and are feeling adventurous, feel free to try out another option. Otherwise, stick with Ubuntu Linux.
 
 ### 1.6. Choose an Instance Type - BE CAREFUL
 
 This is a very important step as it directly affects
+
 - how much lag players will experience
 - cost of your server
 - how many games your server can simultaneously handle
 
 While there are many categories of EC2 server, only two make sense for hosting HoN.
+
 1. General Purpose (t2, t3)
    1. these EC2 instances are general purpose, and cost effective
    2. the players may rarely experience server side lag, but it is hardly noticable
@@ -44,9 +47,11 @@ While there are many categories of EC2 server, only two make sense for hosting H
 
 When comparing your options, take note of the Linux price-per-hour as that is the one that applies when you select Ubuntu. Windows is generally much more expensive.
 When you select a server with 4 or fewer vCPUs, 1 will be dedicated to the OS, leaving #vCPU-1 avialable for running HoN servers.
+
 - For example, if you pick an option with 4vCPUs, 1 will be dedicated to the OS, leaving 3 available for running HoN servers. You can expect this option to be able to handle 3 games simultaneously without issue.
 
 When you select a server with more than 4 vCPUs, 2 will be dedicated to the OS, leaving #vCPU-2 available for running HoN servers.
+
 - For example, if you pick an option with 8vCPUs, 2 will be dedicated to the OS, leaving 6 available for running HoN servers. You can expect this option to be able to handle 6 games simultaneously without issue.
 
 As vCPUs are expensive and RAM is cheap, AWS does not give you high vCPU + low RAM options.
@@ -55,6 +60,7 @@ Pick an instance type that suits your performance needs and budget. It is recomm
 You can easily switch out the instance later.
 
 ### 1.7. Configure Instance Details
+
 - Key Pair (login): you do this once per region.
   - If you have done this step before, select the key pair you already created. Otherwise, proceed. 
   - Click "Create new key pair"
