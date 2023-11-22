@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Monitoring Costs with AWS Cost Explorer
 
 As you embark on your journey of hosting Project Kongor Heroes of Newerth servers on AWS, it's crucial to keep an eye on your costs. AWS provides a powerful tool called Cost Explorer to help you monitor and analyze your AWS spending. Follow these steps to access and utilize AWS Cost Explorer:

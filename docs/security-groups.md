@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Security Groups Configuration
 
 When setting up your EC2 instance for hosting Project Kongor Heroes of Newerth servers, it's essential to configure the security groups to allow traffic on specific ports. Here's a breakdown of the required ports and protocols:

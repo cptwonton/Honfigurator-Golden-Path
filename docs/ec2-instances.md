@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # EC2 Instances
 
 In this section, we will walk through the process of setting up EC2 instances on Amazon Web Services (AWS) for hosting your Project Kongor Heroes of Newerth server.
