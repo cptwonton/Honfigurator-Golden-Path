@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This document provides a golden path for setting up a server on AWS.
+This document provides a golden path for setting up a HonFigurator server on AWS.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following:
-- AWS account
-- ...
+- [AWS account](/docs/aws-account.md)
+- [Project Kongor account](/docs/project-kongor-account.md)
 
 ## Step 1: Create an EC2 Instance
 
