@@ -36,7 +36,7 @@ Before you begin, ensure you have the following:
 
 ### 1.1 EC2 Instances
 
-For information on launching EC2 instances, refer to the (EC2 Instances Guide)[/docs/ec2-instances.md]
+For information on launching EC2 instances, refer to the [EC2 Instances Guide](/docs/ec2-instances.md)
 
 ### 1.2 Security Groups
 
@@ -66,35 +66,39 @@ Note this Public IP - it will not change unless you terminate your instance. You
 
 Now that your instance is running, we need to set up HoN. This is a very straightforward, no frills approach. Simply run these commands exactly as they are shown, and you will win.
 
-`sudo passwd ubuntu` -> set your password. This ensures noone can SSH into your server without your password.
-`echo -e '\nif [ -z "$TMUX" ]; then\ntmux attach-session -t default || tmux new-session -s default\nfi' >> ~/.bashrc && source ~/.bashrc`
-`sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt install curl sudo screen -y`
+- `sudo passwd ubuntu` -> set your password. This ensures noone can SSH into your server without your password.
+- `echo -e '\nif [ -z "$TMUX" ]; then\ntmux attach-session -t default || tmux new-session -s default\nfi' >> ~/.bashrc && source ~/.bashrc`
+- `sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt install curl sudo screen -y`
 
 ### 2.2 Game Server Installation
 
-`curl https://honfigurator.app/hon/server/las/installer.sh | sudo bash -`
-`chown +x /opt/hon/app/launcher`
-`sudo ./opt/hon/app/launcher`
-`sudo reboot`
+- `curl https://honfigurator.app/hon/server/las/installer.sh | sudo bash -`
+- `chown +x /opt/hon/app/launcher`
+- `sudo ./opt/hon/app/launcher`
+- `sudo reboot`
 
 Give your server a moment to respawn. It should not take long!
 
 ### 2.3 Launch and Configure HonFigurator
 
 Once it is back up again:
-`cd /opt/hon/honfigurator`
-`sudo python3 main.py`
+
+- `cd /opt/hon/honfigurator`
+- `sudo python3 main.py`
 
 HonFigurator will prompt you for some information. Provide it your username that you created solely for hosting, alongside the password, discord ID, etc...
 [See details](https://github.com/HoNfigurator/HoNfigurator-Central)
 
 Ensure your server name follows convention! This is what players see when they type in /gi. 
+
 `<hon region>-<locality> <name>`
+
 where...
 
 - `<hon region>` is your server's location (AU/BR/EU/RU/SEA/TH/USE/USW), all caps
 - `<locality>` is country dependent, so in america it would be the state, in other places like EU it would be the country. normal capitalization
 - `<name>` would be the first 4-6 letters of your discord handle/hon username, normal capitalization
+
 no special characters!
 
 so for example:
