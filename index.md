@@ -1,4 +1,5 @@
 ---
+title: Honfigurator Golden Path
 layout: default
 ---
 
@@ -27,8 +28,8 @@ Embark on this adventure with caution, for while AWS costs carry no commitment, 
 
 Before you begin, ensure you have the following:
 
-- [AWS account](/Honfigurator-Golden-Path/docs/aws-account.md)
-- [PK account](/Honfigurator-Golden-Path/docs/project-kongor-account.md)
+- [AWS account](/docs/aws-account)
+- [PK account](/docs/project-kongor-account)
   - Note: You cannot use the account you play on while also using that same account to run this server.
   - You must use a new email that has not been used before to create a PK account
 
@@ -36,19 +37,19 @@ Before you begin, ensure you have the following:
 
 ### 1.1 EC2 Instances
 
-For information on launching EC2 instances, refer to the [EC2 Instances Guide](/docs/ec2-instances.md)
+For information on launching EC2 instances, refer to the [EC2 Instances Guide](/docs/ec2-instances)
 
 ### 1.2 Security Groups
 
-For information on configuring security groups and opening the necessary ports, refer to the [Security Groups Guide](/docs/security-groups.md).
+For information on configuring security groups and opening the necessary ports, refer to the [Security Groups Guide](/docs/security-groups).
 
 ### 1.3 Public IP
 
 By this point in the guide, you should have successfully launched your EC2 instance and configured the necessary security groups. Now, let's note the Public IP address assigned to your instance.
 
 Follow these steps:
-
-1. Navigate to the [AWS Management Console](https://aws.amazon.com/) and log in with your AWS account credentials.
+[AWS Management Console](https://aws.amazon.com/){:target="_blank"}{:rel="nofollow noreferrer"}
+1. Navigate to the [AWS Management Console](https://aws.amazon.com/){:target="_blank"}{:rel="nofollow noreferrer"} and log in with your AWS account credentials.
 
 2. In the top-right corner, click on "Services" and select "EC2" under the "Compute" section.
 
@@ -87,7 +88,7 @@ Once it is back up again:
 - `sudo python3 main.py`
 
 HonFigurator will prompt you for some information. Provide it your username that you created solely for hosting, alongside the password, discord ID, etc...
-[See details](https://github.com/HoNfigurator/HoNfigurator-Central)
+[See details](https://github.com/HoNfigurator/HoNfigurator-Central){:target="_blank"}{:rel="nofollow noreferrer"}
 
 Ensure your server name follows convention! This is what players see when they type in /gi.
 
@@ -123,17 +124,17 @@ Once someone grants you those permissions, your server will automatically pick t
 
 ### 3.1 AWS Cost Explorer
 
-Please see [AWS Cost Explorer](/Honfigurator-Golden-Path/docs/aws-cost-explorer.md)
+Please see [AWS Cost Explorer](/docs/aws-cost-explorer)
 
 ### 3.2 HonFigurator Management Portal
 
-Navigate to the [HonFigurator Management Portal](https://management.honfigurator.app/login)
+Navigate to the [HonFigurator Management Portal](https://management.honfigurator.app/login){:target="_blank"}{:rel="nofollow noreferrer"}
 Log in with your discord
 Using the server name you created earlier in HonFigurator, and the public IP of your server, click Add Server at the top right and add your server to HonFigurator.
 
 ## Conclusion
 
 Congratulations! You've successfully launched and configured your EC2 instance for hosting a Project Kongor Heroes of Newerth server on AWS.
-Remmber to periodically check Cost Explorer to ensure your actual cost aligns with what you'd expect.
+Remember to periodically check Cost Explorer to ensure your actual cost aligns with what you'd expect.
 
 Thank you for hosting!
