@@ -74,7 +74,7 @@ Now that your instance is running, we need to set up HoN. This is a very straigh
 ### 2.2 Game Server Installation
 
 - `curl https://honfigurator.app/hon/server/las/installer.sh | sudo bash -`
-- `chown +x /opt/hon/app/launcher`
+- `sudo chmod +x /opt/hon/app/launcher`
 - `sudo ./opt/hon/app/launcher`
 - `sudo reboot`
 
